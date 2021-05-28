@@ -1,0 +1,55 @@
+﻿<Window x:Class="Calculator_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20"  Text="Left Operand"   VerticalAlignment="Center" HorizontalAlignment="Right" />
+        <TextBox Name="la"  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="6,6,103,6" Width="auto"/>
+        <TextBox Name="op"  Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" Margin="0,12,75,0" Width="108" HorizontalAlignment="Right"/>
+        <TextBox Name="ra"  Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="74,12,75,0" Width="auto"/>
+        <TextBlock Grid.Row="1" Grid.Column="3" FontSize="18"  Text="Right Operand:"   VerticalAlignment="Center" HorizontalAlignment="Right" />
+
+
+        <Button Name="add"  Grid.Row="4" Grid.Column="1" Margin="6" Content="confirm" Click="addButton_Click" />
+        <Button Name="sub"  Grid.Row="4" Grid.Column="2" Margin="6" Content="Clear" Click="clearing" />
+
+
+
+        <TextBlock Grid.Row="3" Grid.Column="4" FontSize="20"  Text="="   VerticalAlignment="Center" HorizontalAlignment="Right" />
+        <TextBlock Grid.Row="3" Grid.Column="5" FontSize="20"  Text="Result"  Name="res" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,6,23,0" Grid.ColumnSpan="2" Width="158" />
+
+    </Grid>
+</Window>
